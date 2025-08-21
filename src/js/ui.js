@@ -80,8 +80,8 @@ async function handleCreateSession() {
   showView('codeExchange');
   codeExchangeTitle.textContent = 'Create New Chat';
   codeExchangeInstructions.textContent = 'Copy this code and send it to your peer.';
-  submitCodeBtn.textContent = 'Waiting for Peer...';
-  submitCodeBtn.disabled = true;
+  submitCodeBtn.textContent = 'Connect';
+  submitCodeBtn.disabled = false;
   codeInput.placeholder = 'Paste the response code from your peer here...';
 
   try {
