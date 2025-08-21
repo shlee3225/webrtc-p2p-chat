@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2P Anonymous Chat</title>
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>P2P Anonymous Chat</h1>
+            <p>Secure, serverless, anonymous chat powered by WebRTC.</p>
+        </header>
+
+        <!-- Nickname Entry View -->
+        <section id="nickname-view" class="view active">
+            <div class="card">
+                <h2>Enter Your Nickname</h2>
+                <input type="text" id="nickname-input" placeholder="e.g., Anonymous Cat" maxlength="20">
+                <button id="start-chat-btn">Start Chatting</button>
+            </div>
+        </section>
+
+        <!-- Initial Action View -->
+        <section id="initial-view" class="view">
+            <div class="card">
+                <h2>Welcome, <span id="nickname-display"></span>!</h2>
+                <p>How would you like to connect?</p>
+                <div class="button-group">
+                    <button id="create-session-btn">Create New Chat</button>
+                    <button id="join-session-btn">Join Existing Chat</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Code Exchange View -->
+        <section id="code-exchange-view" class="view">
+            <div class="card">
+                <h2 id="code-exchange-title"></h2>
+                <p id="code-exchange-instructions"></p>
+                <textarea id="code-output" readonly placeholder="Code will appear here..."></textarea>
+                <button id="copy-code-btn">Copy Code</button>
+                <hr>
+                <textarea id="code-input" placeholder="Paste the code from your peer here..."></textarea>
+                <button id="submit-code-btn">Connect</button>
+                <button id="cancel-btn" class="secondary">Cancel</button>
+            </div>
+        </section>
+
+        <!-- Chat View -->
+        <section id="chat-view" class="view">
+            <div class="chat-container">
+                <div id="chat-messages">
+                    <!-- Messages will be appended here -->
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="message-input" placeholder="Type your message...">
+                    <button id="send-message-btn">Send</button>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Connection Status: <span id="connection-status">Idle</span></p>
+        </footer>
+    </div>
+
+    <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
