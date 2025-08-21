@@ -37,6 +37,8 @@ jobs:
           node-version: 18
       - name: Install dependencies
         run: npm install
+      - name: Add execute permission to vite
+        run: chmod +x ./node_modules/.bin/*
       - name: Build
         run: npm run build
       - name: Setup Pages
